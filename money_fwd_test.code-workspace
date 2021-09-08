@@ -4,5 +4,8 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"javascript.validate.enable": false,
+		"standard.engine": "ts-standard"
+	}
 }
