@@ -7,12 +7,14 @@ import {
 
 const TheLayout = (): JSX.Element => {
   return (
-    <div className='c-app c-default-layout'>
-      <TheSidebar />
-      <div className='c-wrapper'>
-        <TheHeader />
-        <div className='c-body'>
-          <TheContent />
+    <div style={{ flexDirection: 'column' }}>
+      <TheHeader />
+      <div className='c-app c-default-layout'>
+        <TheSidebar />
+        <div className='c-wrapper' style={{ marginTop: 56 }}>
+          <div className='c-body'>
+            <TheContent />
+          </div>
         </div>
       </div>
     </div>

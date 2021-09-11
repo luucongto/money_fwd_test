@@ -1,6 +1,6 @@
 import React from 'react'
 import { useAppSelector, useAppDispatch } from '../redux/hooks'
-import { set, selectSidebarShow } from '../redux/sidebar'
+import { set, selectSidebarShow } from '../redux/reducers/sidebar'
 import {
   CCreateElement,
   CSidebar,
@@ -21,7 +21,8 @@ const TheSidebar = (): JSX.Element => {
   return (
     <CSidebar
       show={show}
-      onShowChange={(val: boolean | string |undefined) => dispatch(set(val))}
+      onShowChange={(val: boolean | string | undefined) => dispatch(set(val))}
+      className='sidebarTopPos'
     >
       <CSidebarNav>
 

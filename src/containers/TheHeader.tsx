@@ -1,13 +1,7 @@
-import CIcon from '@coreui/icons-react'
-import {
-  CBreadcrumbRouter, CHeader, CHeaderBrand,
-  CHeaderNav, CSubheader, CToggler
-} from '@coreui/react'
+import { CHeader, CToggler } from '@coreui/react'
 import React from 'react'
-import { useAppSelector, useAppDispatch } from '../redux/hooks'
-// routes config
-import routes from '../routes'
-import { set, selectSidebarShow } from '../redux/sidebar'
+import { useAppDispatch, useAppSelector } from '../redux/hooks'
+import { selectSidebarShow, set } from '../redux/reducers/sidebar'
 
 const TheHeader = (): JSX.Element => {
   const dispatch = useAppDispatch()
@@ -25,18 +19,7 @@ const TheHeader = (): JSX.Element => {
         className='ml-3 d-md-down-none'
         onClick={toggleSidebar}
       />
-      <CHeaderBrand className='mx-auto d-lg-none' to='/'>
-        <CIcon name='logo' height='48' alt='Logo' />
-      </CHeaderBrand>
-
-      <CHeaderNav className='d-md-down-none mr-auto' />
-
-      <CSubheader className='px-3 justify-content-between'>
-        <CBreadcrumbRouter
-          className='border-0 c-subheader-nav m-0 px-0 px-md-3'
-          routes={routes}
-        />
-      </CSubheader>
+      <h4 className='card-title mb-0' style={{ alignSelf: 'center' }}>Account Management</h4>
     </CHeader>
   )
 }
