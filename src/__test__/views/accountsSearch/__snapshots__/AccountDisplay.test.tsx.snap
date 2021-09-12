@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AccountDisplay display user accounts renders AccountDisplay without crashing 1`] = `ReactWrapper {}`;
+
+exports[`AccountDisplay display user renders AccountDisplay without crashing 1`] = `ReactWrapper {}`;

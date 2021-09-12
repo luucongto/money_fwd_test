@@ -57,13 +57,19 @@
   },
   "devDependencies": {
     "@babel/core": "^7.13.14",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/enzyme": "^3.10.9",
     "@types/react-alert": "^5.2.1",
     "@types/react-dom": "^17.0.9",
     "@types/react-router-dom": "^5.1.8",
     "@types/redux-logger": "^3.0.9",
+    "@types/redux-mock-store": "^1.0.3",
     "@types/seamless-immutable": "^7.1.16",
     "auto-changelog": "~2.2.1",
     "react-scripts": "^4.0.3",
+    "redux-mock-store": "^1.5.4",
     "ts-standard": "^10.0.0"
   }
 }

@@ -21,28 +21,21 @@ class API {
   }
 
   async user (params: UserRequest): Promise<IResponse> {
-    try {
-      const data = await this.api.get(`users/${params?.userId}/accounts`)
-      if (data?.data !== null) {
-        const accounts = data.data.map((each: any) => {
-          return each.attributes
-        })
-        return {
-          error: null,
-          data: {
-            userId: params?.userId,
-            accounts
-          }
-        }
-      } else {
-        return {
-          error: 'user not found',
-          data: null
+    const data = await this.api.get(`users/${params?.userId}/accounts`)
+    if (data?.data !== null) {
+      const accounts = data.data.map((each: any) => {
+        return each.attributes
+      })
+      return {
+        error: null,
+        data: {
+          userId: params?.userId,
+          accounts
         }
       }
-    } catch (error) {
+    } else {
       return {
-        error: 'failed',
+        error: 'user not found',
         data: null
       }
     }

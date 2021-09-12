@@ -6,8 +6,6 @@ import {
 import { useState } from 'react'
 
 import { useHistory } from 'react-router-dom'
-import { useAppDispatch } from '../../redux/hooks'
-import { actions } from '../../redux/reducers/user'
 const AccountsSearch = (): JSX.Element => {
   const [userId, setUserId] = useState('')
   const history = useHistory()
