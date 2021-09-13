@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { RootState } from '../store'
-interface SidebarStatus {
+export interface SidebarStatus {
   sidebarShow: boolean | '' | 'responsive' | undefined
 }
 

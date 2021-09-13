@@ -11,7 +11,7 @@ export interface User {
   accounts: UserAccount[]
 }
 
-interface UserState {
+export interface UserState {
   data: null | User
   error: null | string
   fetching: boolean
