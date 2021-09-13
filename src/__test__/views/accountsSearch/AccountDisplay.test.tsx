@@ -1,6 +1,5 @@
 import { mount, ReactWrapper } from 'enzyme'
 import React from 'react'
-import { useAlert } from 'react-alert'
 import { Provider } from 'react-redux'
 import configureStore from 'redux-mock-store'
 import createSagaMiddleware from 'redux-saga'
@@ -8,13 +7,6 @@ import AccountDisplay from '../../../views/accountsSearch/AccountDisplay'
 
 const sagaMiddleware = createSagaMiddleware()
 const mockStore = configureStore([sagaMiddleware])
-
-jest.mock('react-alert', () => ({
-  ...jest.requireActual('react-alert'),
-  useAlert: () => ({
-    show: jest.fn()
-  })
-}))
 
 describe('AccountDisplay display user accounts', () => {
   let wrapperResult: ReactWrapper
@@ -62,8 +54,7 @@ describe('AccountDisplay display user', () => {
     )
   })
 
-  test('renders AccountDisplay without error', () => {
-    expect(store.getActions().length).toEqual(2)
-    expect(store.getActions()[1].type).toEqual('user/clearError')
+  test('renders AccountDisplay with error', () => {
+    expect(wrapperResult.text().includes('USER NOT FOUND')).toBe(true)
   })
 })

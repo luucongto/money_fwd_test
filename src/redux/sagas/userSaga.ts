@@ -6,7 +6,6 @@ import { actions as UserActions } from '../reducers/user'
 export interface UserRequest {
   userId: string
 }
-// import axios from 'axios'
 export function * user (api: any, action: AnyAction): any {
   try {
     const res = yield call(api, action.payload)

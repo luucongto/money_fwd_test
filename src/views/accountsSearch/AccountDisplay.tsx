@@ -1,16 +1,16 @@
 import {
+  CButton,
   CCard,
-  CCardBody, CCardHeader, CDataTable
+  CCardBody, CCardHeader, CDataTable, CModal, CModalBody, CModalFooter, CModalHeader, CModalTitle
 } from '@coreui/react'
-import { useEffect } from 'react'
-import { useAlert } from 'react-alert'
+import { useEffect, useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../redux/hooks'
 import { actions } from '../../redux/reducers/user'
 
 const AccountDisplay = (props: any): JSX.Element => {
   const dispatch = useAppDispatch()
-  const alert = useAlert()
   const userId = props?.match?.params?.userId
+  const [modal, setModal] = useState(false)
   useEffect(() => {
     dispatch(actions.userRequest({ userId }))
   }, [userId, dispatch])
@@ -19,8 +19,7 @@ const AccountDisplay = (props: any): JSX.Element => {
   const error = useAppSelector(state => { return state.user.error != null ? state.user.error : null })
   useEffect(() => {
     if (error !== null) {
-      alert.show(error)
-      dispatch(actions.clearError())
+      setModal(true)
     }
   }, [error])
   const fields = ['id', 'name', 'balance']
@@ -43,6 +42,28 @@ const AccountDisplay = (props: any): JSX.Element => {
 
         </CCardBody>
       </CCard>
+
+      <CModal
+        show={modal}
+        onClose={setModal}
+      >
+        <CModalHeader closeButton>
+          <CModalTitle>Error</CModalTitle>
+        </CModalHeader>
+        <CModalBody>
+          {error?.toUpperCase()}
+        </CModalBody>
+        <CModalFooter>
+          <CButton
+            color='primary'
+            onClick={() => {
+              setModal(false)
+              dispatch(actions.clearError())
+            }}
+          >Close
+          </CButton>
+        </CModalFooter>
+      </CModal>
     </>
   )
 }
