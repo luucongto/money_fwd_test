@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/money_fwd_test/static/css/main.d984298e.chunk.css",
+    "main.js": "/money_fwd_test/static/js/main.b6c48734.chunk.js",
+    "main.js.map": "/money_fwd_test/static/js/main.b6c48734.chunk.js.map",
+    "runtime-main.js": "/money_fwd_test/static/js/runtime-main.109a2e3a.js",
+    "runtime-main.js.map": "/money_fwd_test/static/js/runtime-main.109a2e3a.js.map",
+    "static/css/2.0ef68903.chunk.css": "/money_fwd_test/static/css/2.0ef68903.chunk.css",
+    "static/js/2.88cde409.chunk.js": "/money_fwd_test/static/js/2.88cde409.chunk.js",
+    "static/js/2.88cde409.chunk.js.map": "/money_fwd_test/static/js/2.88cde409.chunk.js.map",
+    "static/js/3.ea6a2b16.chunk.js": "/money_fwd_test/static/js/3.ea6a2b16.chunk.js",
+    "static/js/3.ea6a2b16.chunk.js.map": "/money_fwd_test/static/js/3.ea6a2b16.chunk.js.map",
+    "static/js/4.14c9e50d.chunk.js": "/money_fwd_test/static/js/4.14c9e50d.chunk.js",
+    "static/js/4.14c9e50d.chunk.js.map": "/money_fwd_test/static/js/4.14c9e50d.chunk.js.map",
+    "index.html": "/money_fwd_test/index.html",
+    "static/css/2.0ef68903.chunk.css.map": "/money_fwd_test/static/css/2.0ef68903.chunk.css.map",
+    "static/css/main.d984298e.chunk.css.map": "/money_fwd_test/static/css/main.d984298e.chunk.css.map",
+    "static/js/2.88cde409.chunk.js.LICENSE.txt": "/money_fwd_test/static/js/2.88cde409.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.109a2e3a.js",
+    "static/css/2.0ef68903.chunk.css",
+    "static/js/2.88cde409.chunk.js",
+    "static/css/main.d984298e.chunk.css",
+    "static/js/main.b6c48734.chunk.js"
+  ]
+}
