@@ -23,6 +23,10 @@ const AccountDisplay = (props: any): JSX.Element => {
     }
   }, [error])
   const fields = ['id', 'name', 'balance']
+  const onCloseModal = (): void => {
+    setModal(false)
+    dispatch(actions.clearError())
+  }
   return (
     <>
       <CCard>
@@ -45,7 +49,7 @@ const AccountDisplay = (props: any): JSX.Element => {
 
       <CModal
         show={modal}
-        onClose={setModal}
+        onClose={onCloseModal}
       >
         <CModalHeader closeButton>
           <CModalTitle>Error</CModalTitle>
@@ -56,10 +60,7 @@ const AccountDisplay = (props: any): JSX.Element => {
         <CModalFooter>
           <CButton
             color='primary'
-            onClick={() => {
-              setModal(false)
-              dispatch(actions.clearError())
-            }}
+            onClick={onCloseModal}
           >Close
           </CButton>
         </CModalFooter>
